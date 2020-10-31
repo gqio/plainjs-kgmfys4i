@@ -1,5 +1,4 @@
 const template = document.createElement("template");
-console.log("index.............");
 template.innerHTML = `
   <style>
     * {
