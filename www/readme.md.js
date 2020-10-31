@@ -1,14 +1,15 @@
 import '../dist/index.js';
 
+const modules = [''];
 function require(library) {
-//   const idx = modules.findIndex(
-//     (it) =>
-//       it === library ||
-//       it.replace(/^((@[^/]*\/)?[^/@]*)(@[^/]*)?(\/[^@]*)?$/, '$1$4') ===
-//         library // removes version pinned, if any
-//   );
-//   if (idx === -1) throw new Error(`Import ${library} not found in project scope: ${modules}`);
-//   return import('https://stg-packd-es-center.web.app/').then((module) => module['packd_export_'+idx]);
+  const idx = modules.findIndex(
+    (it) =>
+      it === library ||
+      it.replace(/^((@[^/]*\/)?[^/@]*)(@[^/]*)?(\/[^@]*)?$/, '$1$4') ===
+        library // removes version pinned, if any
+  );
+  if (idx === -1) throw new Error(`Import ${library} not found in project scope: ${modules}`);
+  // else return import('https://stg-packd-es-center.web.app/').then((module) => module['packd_export_'+idx]);
 }
 
 function typeOf(obj) {
